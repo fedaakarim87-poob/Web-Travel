@@ -30,286 +30,6 @@
 }
 
 
-body {
-  font-family: 'Segoe UI', sans-serif; /* تحديد نوع الخط */
-  direction: rtl; /* اتجاه النص من اليمين لليسار */
-  background-color: #f9f9f9; /* لون خلفية الصفحة */
-  margin: 0; /* إزالة الهوامش الخارجية */
-  padding: 0; /* إزالة الحشوات الداخلية */
-}
-
-header {
-  background-color: #f2f3f7; /* لون خلفية الهيدر */
-  color: #000000; /* لون النص داخل الهيدر */
-  padding: 25px 20px; /* حشوة داخلية للهيدر */
-  text-align: right; /* محاذاة النص لليمين */
-  font-size: 25px; /* حجم الخط */
-  font-weight: bold; /* جعل الخط عريض */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* ظل خفيف للهيدر */
-  border-radius: 10px 10px 0 0; /* تدوير الزوايا العلوية */
-}
-
-.logout {
-  position: absolute; /* تحديد موقع الزر بشكل مطلق */
-  left: 20px; /* إزاحة من اليسار */
-  top: 20px; /* إزاحة من الأعلى */
-  text-decoration: none; /* إزالة خط تحت النص */
-  color: #ffffff; /* لون النص أبيض */
-  background-color: #1E3A8A; /* لون خلفية الزر */
-  padding: 10px; /* حشوة داخلية */
-  border-radius: 10px; /* تدوير الزوايا */
-  font-weight: bold; /* جعل الخط عريض */
-}
-
-nav {
-  background-color: #1E3A8A; /* لون خلفية شريط التنقل */
-  text-align: center; /* محاذاة الروابط للوسط */
-  font-weight: bold; /* جعل الخط عريض */
-  padding: 20px 0; /* حشوة عمودية */
-  font-size: 20px; /* حجم الخط */
-  box-shadow: 0 2px 5px rgba(0,0,0,2); /* ظل للشريط */
-}
-
-nav a {
-  text-decoration: none; /* إزالة خط تحت الروابط */
-  margin: 10px; /* مسافة بين الروابط */
-  color: #FFFFFF; /* لون النص أبيض */
-  padding: 5px 15px; /* حشوة داخلية للرابط */
-  transition: color 0.3s, background-color 0.3s; /* تأثير انتقال عند التحويم */
-  border-radius: 5px; /* تدوير الزوايا */
-}
-
-nav a:hover {
-  color: #1E3A8A; /* تغيير لون النص عند التحويم */
-  background-color: #ff913e; /* تغيير خلفية الرابط عند التحويم */
-}
-
-.contact-section {
-  padding: 30px; /* حشوة داخلية */
-  width: 90%; /* عرض بنسبة 90% من الشاشة */
-  max-width: 320px; /* أقصى عرض */
-  margin: 40px auto; /* توسيط العنصر مع مسافة علوية */
-  background-color: #fff; /* خلفية بيضاء */
-  border-radius: 15px; /* تدوير الزوايا */
-  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* ظل خفيف */
-  text-align: center; /* محاذاة النص للوسط */
-}
-
-.contact-section h2 {
-  color: #ff8000; /* لون العنوان */
-  margin-bottom: 20px; /* مسافة أسفل العنوان */
-}
-
-form {
-  display: flex; /* ترتيب العناصر بشكل عمودي */
-  flex-direction: column; /* اتجاه عمودي */
-  gap: 15px; /* مسافة بين الحقول */
-}
-
-label {
-  font-weight: bold; /* جعل النص عريض */
-  margin-bottom: 5px; /* مسافة أسفل العنوان */
-}
-
-input, textarea {
-  padding: 10px; /* حشوة داخلية */
-  border: 1px solid #ccc; /* حدود رمادية */
-  border-radius: 5px; /* تدوير الزوايا */
-  font-size: 15px; /* حجم الخط */
-}
-
-button {
-  background-color: #ff8000; /* لون خلفية الزر */
-  color: white; /* لون النص أبيض */
-  border: none; /* بدون حدود */
-  padding: 10px; /* حشوة داخلية */
-  border-radius: 5px; /* تدوير الزوايا */
-  cursor: pointer; /* تغيير شكل المؤشر عند التحويم */
-  font-size: 16px; /* حجم الخط */
-}
-
-button:hover {
-  background-color: #e66f00; /* تغيير لون الزر عند التحويم */
-}
-
-.main-footer {
-  background-color: #1E3A8A; /* لون خلفية الفوتر */
-  color: #ecf0f1; /* لون النص فاتح */
-  padding: 15px 20px; /* حشوة داخلية */
-  margin-top: auto; /* دفع الفوتر للأسفل */
-  width: 100%; /* عرض كامل */
-  /* position:static;
-     position: relative;
-     bottom: 0; */ /* ملاحظات محذوفة */
-}
-
-/* تنسيق الحاوية الداخلية للفوتر */
-.footer-container {
-  display: flex; /* توزيع أفقي للعناصر */
-  flex-wrap: wrap; /* السماح بالنزول في الشاشات الصغيرة */
-  justify-content: center; /* توسيط المحتوى */
-  gap: 10px; /* مسافة بين العناصر */
-}
-
-/* تنسيق كل قسم داخل الفوتر */
-.footer-section {
-  width: calc(50% - 20px); /* عرض كل قسم بنسبة 50% مع مسافة */
-}
-
-.footer-section h4 {
-  color: #FF7F11; /* لون العنوان */
-  font-size: 14px; /* حجم الخط */
-}
-
-.footer-section p {
-  font-size: 12px; /* حجم النص داخل الفقرة */
-}
-
-/* تنسيق قسم "من نحن" */
-section {
-  text-align: center; /* محاذاة النص للوسط */
-  margin: 40px auto; /* مسافة علوية وتوسيط */
-  padding: 20px; /* حشوة داخلية */
-  max-width: 800px; /* أقصى عرض */
-  background-color: #ffffff; /* خلفية بيضاء */
-  border-radius: 15px; /* تدوير الزوايا */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* ظل خفيف */
-  border: 2px solid #FF7F11; /* حدود برتقالية */
-}
-
-section h2 {
-  color: #FF7F11; /* لون العنوان */
-  margin-bottom: 10px; /* مسافة أسفل العنوان */
-  font-size: 24px; /* حجم الخط */
-}
-
-section p {
-  color: #1e3a8a; /* لون النص */
-  font-size: 18px; /* حجم الخط */
-  line-height: 1.8; /* ارتفاع السطر */
-}
-
-/*games page*/
-
-body {
-  font-family: 'Segoe UI', sans-serif; /* تحديد نوع الخط */
-  background: url('plane.jpg') no-repeat center center fixed; /* خلفية بصورة طائرة، ثابتة ومتمركزة */
-  background-size: cover; /* جعل الصورة تغطي كامل الشاشة */
-  color: #fff; /* لون النص أبيض */
-  text-align: center; /* محاذاة النص للوسط */
-  margin: 0; /* إزالة الهوامش الخارجية */
-  padding: 20px; /* حشوة داخلية */
-  position: relative; /* لتفعيل الطبقات داخل body */
-}
-
-body::before {
-  content: ""; /* محتوى فارغ لإنشاء طبقة */
-  position: fixed; /* تثبيت الطبقة في الشاشة */
-  top: 0; left: 0; /* بداية من الزاوية العليا اليسرى */
-  width: 100%; height: 100%; /* تغطية كاملة للشاشة */
-  background: rgba(0, 0, 0, 0.4); /* طبقة شفافة سوداء فوق الخلفية */
-  z-index: -1; /* خلف المحتوى الأساسي */
-}
-
-h1 {
-  font-size: 32px; /* حجم العنوان */
-  margin-bottom: 30px; /* مسافة أسفل العنوان */
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.6); /* ظل للنص */
-  letter-spacing: 1px; /* تباعد بين الحروف */
-}
-
-.question {
-  margin: 30px auto; /* توسيط العنصر مع مسافة علوية */
-  padding: 20px; /* حشوة داخلية */
-  border: 2px solid #ffffff55; /* حدود شفافة بيضاء */
-  border-radius: 10px; /* تدوير الزوايا */
-  width: 80%; /* عرض بنسبة 80% من الشاشة */
-  background-color: rgba(255, 255, 255, 0.1); /* خلفية شفافة بيضاء */
-  box-shadow: 0 0 10px rgba(0,0,0,0.3); /* ظل خفيف */
-  animation: fadeIn 0.8s ease-in-out; /* تطبيق حركة دخول */
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); } /* بداية غير مرئية ومنخفضة */
-  to { opacity: 1; transform: translateY(0); } /* نهاية مرئية في مكانها */
-}
-
-.question img {
-  width: 150px; /* عرض الصورة */
-  height: auto; /* ارتفاع تلقائي حسب النسبة */
-  margin: 15px 0; /* مسافة علوية وسفلية */
-  border-radius: 8px; /* تدوير زوايا الصورة */
-  box-shadow: 0 0 5px rgba(255,255,255,0.5); /* ظل أبيض خفيف للصورة */
-}
-
-.options {
-  display: flex; /* توزيع أفقي للأزرار */
-  flex-wrap: wrap; /* السماح بالنزول في الشاشات الصغيرة */
-  justify-content: center; /* توسيط الأزرار */
-  gap: 10px; /* مسافة بين الأزرار */
-  margin-top: 10px; /* مسافة علوية */
-}
-
-.options button {
-  padding: 10px 20px; /* حشوة داخلية */
-  font-size: 16px; /* حجم الخط */
-  border: none; /* بدون حدود */
-  border-radius: 6px; /* تدوير الزوايا */
-  background-color: #ffffffcc; /* خلفية شفافة بيضاء */
-  color: #333; /* لون النص رمادي غامق */
-  cursor: pointer; /* شكل المؤشر عند التحويم */
-  transition: transform 0.2s, background-color 0.3s; /* تأثيرات عند التحويم */
-}
-
-.options button:hover {
-  background-color: #fff; /* تغيير الخلفية عند التحويم */
-  transform: scale(1.05); /* تكبير الزر قليلاً */
-}
-
-.result {
-  margin-top: 10px; /* مسافة علوية */
-  font-weight: bold; /* جعل النص عريض */
-  font-size: 18px; /* حجم الخط */
-}
-
-#finalScore, #finalScore2 {
-  margin-top: 20px; /* مسافة علوية */
-  font-size: 20px; /* حجم الخط */
-  font-weight: bold; /* جعل النص عريض */
-  color: #fff; /* لون النص أبيض */
-}
-
-#nextBtn, #restartBtn2 {
-  margin-top: 20px; /* مسافة علوية */
-  padding: 12px 24px; /* حشوة داخلية */
-  font-size: 18px; /* حجم الخط */
-  border: none; /* بدون حدود */
-  border-radius: 8px; /* تدوير الزوايا */
-  background-color: #ff6600; /* لون خلفية برتقالي */
-  color: white; /* لون النص أبيض */
-  cursor: pointer; /* شكل المؤشر */
-  transition: background-color 0.3s; /* تأثير عند التحويم */
-}
-
-#nextBtn:hover, #restartBtn2:hover {
-  background-color: #e65c00; /* تغيير لون الخلفية عند التحويم */
-}
-
-@media (max-width: 600px) {
-  .question {
-    width: 95%; /* عرض أكبر في الشاشات الصغيرة */
-    padding: 15px; /* تقليل الحشوة */
-  }
-
-  .options button {
-    font-size: 14px; /* تقليل حجم الخط */
-    padding: 8px 16px; /* تقليل الحشوة */
-  }
-
-  h1 {
-    font-size: 24px; /* تقليل حجم العنوان */
-  }
-}
 
 input {
   width: 100%;
@@ -631,5 +351,288 @@ nav a:hover {
  .cont:nth-child(even) .destination 
  { flex-direction: row-reverse; }
 
+/*________________________________________بدايه الكود حق فداء _____________________________*/
+body {
+  font-family: 'Segoe UI', sans-serif; /* تحديد نوع الخط */
+  direction: rtl; /* اتجاه النص من اليمين لليسار */
+  background-color: #f9f9f9; /* لون خلفية الصفحة */
+  margin: 0; /* إزالة الهوامش الخارجية */
+  padding: 0; /* إزالة الحشوات الداخلية */
+}
 
+header {
+  background-color: #f2f3f7; /* لون خلفية الهيدر */
+  color: #000000; /* لون النص داخل الهيدر */
+  padding: 25px 20px; /* حشوة داخلية للهيدر */
+  text-align: right; /* محاذاة النص لليمين */
+  font-size: 25px; /* حجم الخط */
+  font-weight: bold; /* جعل الخط عريض */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* ظل خفيف للهيدر */
+  border-radius: 10px 10px 0 0; /* تدوير الزوايا العلوية */
+}
+
+.logout {
+  position: absolute; /* تحديد موقع الزر بشكل مطلق */
+  left: 20px; /* إزاحة من اليسار */
+  top: 20px; /* إزاحة من الأعلى */
+  text-decoration: none; /* إزالة خط تحت النص */
+  color: #ffffff; /* لون النص أبيض */
+  background-color: #1E3A8A; /* لون خلفية الزر */
+  padding: 10px; /* حشوة داخلية */
+  border-radius: 10px; /* تدوير الزوايا */
+  font-weight: bold; /* جعل الخط عريض */
+}
+
+nav {
+  background-color: #1E3A8A; /* لون خلفية شريط التنقل */
+  text-align: center; /* محاذاة الروابط للوسط */
+  font-weight: bold; /* جعل الخط عريض */
+  padding: 20px 0; /* حشوة عمودية */
+  font-size: 20px; /* حجم الخط */
+  box-shadow: 0 2px 5px rgba(0,0,0,2); /* ظل للشريط */
+}
+
+nav a {
+  text-decoration: none; /* إزالة خط تحت الروابط */
+  margin: 10px; /* مسافة بين الروابط */
+  color: #FFFFFF; /* لون النص أبيض */
+  padding: 5px 15px; /* حشوة داخلية للرابط */
+  transition: color 0.3s, background-color 0.3s; /* تأثير انتقال عند التحويم */
+  border-radius: 5px; /* تدوير الزوايا */
+}
+
+nav a:hover {
+  color: #1E3A8A; /* تغيير لون النص عند التحويم */
+  background-color: #ff913e; /* تغيير خلفية الرابط عند التحويم */
+}
+
+.contact-section {
+  padding: 30px; /* حشوة داخلية */
+  width: 90%; /* عرض بنسبة 90% من الشاشة */
+  max-width: 320px; /* أقصى عرض */
+  margin: 40px auto; /* توسيط العنصر مع مسافة علوية */
+  background-color: #fff; /* خلفية بيضاء */
+  border-radius: 15px; /* تدوير الزوايا */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* ظل خفيف */
+  text-align: center; /* محاذاة النص للوسط */
+}
+
+.contact-section h2 {
+  color: #ff8000; /* لون العنوان */
+  margin-bottom: 20px; /* مسافة أسفل العنوان */
+}
+
+form {
+  display: flex; /* ترتيب العناصر بشكل عمودي */
+  flex-direction: column; /* اتجاه عمودي */
+  gap: 15px; /* مسافة بين الحقول */
+}
+
+label {
+  font-weight: bold; /* جعل النص عريض */
+  margin-bottom: 5px; /* مسافة أسفل العنوان */
+}
+
+input, textarea {
+  padding: 10px; /* حشوة داخلية */
+  border: 1px solid #ccc; /* حدود رمادية */
+  border-radius: 5px; /* تدوير الزوايا */
+  font-size: 15px; /* حجم الخط */
+}
+
+button {
+  background-color: #ff8000; /* لون خلفية الزر */
+  color: white; /* لون النص أبيض */
+  border: none; /* بدون حدود */
+  padding: 10px; /* حشوة داخلية */
+  border-radius: 5px; /* تدوير الزوايا */
+  cursor: pointer; /* تغيير شكل المؤشر عند التحويم */
+  font-size: 16px; /* حجم الخط */
+}
+
+button:hover {
+  background-color: #e66f00; /* تغيير لون الزر عند التحويم */
+}
+
+.main-footer {
+  background-color: #1E3A8A; /* لون خلفية الفوتر */
+  color: #ecf0f1; /* لون النص فاتح */
+  padding: 15px 20px; /* حشوة داخلية */
+  margin-top: auto; /* دفع الفوتر للأسفل */
+  width: 100%; /* عرض كامل */
+  /* position:static;
+     position: relative;
+     bottom: 0; */ /* ملاحظات محذوفة */
+}
+
+/* تنسيق الحاوية الداخلية للفوتر */
+.footer-container {
+  display: flex; /* توزيع أفقي للعناصر */
+  flex-wrap: wrap; /* السماح بالنزول في الشاشات الصغيرة */
+  justify-content: center; /* توسيط المحتوى */
+  gap: 10px; /* مسافة بين العناصر */
+}
+
+/* تنسيق كل قسم داخل الفوتر */
+.footer-section {
+  width: calc(50% - 20px); /* عرض كل قسم بنسبة 50% مع مسافة */
+}
+
+.footer-section h4 {
+  color: #FF7F11; /* لون العنوان */
+  font-size: 14px; /* حجم الخط */
+}
+
+.footer-section p {
+  font-size: 12px; /* حجم النص داخل الفقرة */
+}
+
+/* تنسيق قسم "من نحن" */
+section {
+  text-align: center; /* محاذاة النص للوسط */
+  margin: 40px auto; /* مسافة علوية وتوسيط */
+  padding: 20px; /* حشوة داخلية */
+  max-width: 800px; /* أقصى عرض */
+  background-color: #ffffff; /* خلفية بيضاء */
+  border-radius: 15px; /* تدوير الزوايا */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* ظل خفيف */
+  border: 2px solid #FF7F11; /* حدود برتقالية */
+}
+
+section h2 {
+  color: #FF7F11; /* لون العنوان */
+  margin-bottom: 10px; /* مسافة أسفل العنوان */
+  font-size: 24px; /* حجم الخط */
+}
+
+section p {
+  color: #1e3a8a; /* لون النص */
+  font-size: 18px; /* حجم الخط */
+  line-height: 1.8; /* ارتفاع السطر */
+}
+
+/*______________________نهايه الكود حق فداء_________________________________________________*/
+
+/*games page*/
+
+body {
+  font-family: 'Segoe UI', sans-serif; /* تحديد نوع الخط */
+  background: url('plane.jpg') no-repeat center center fixed; /* خلفية بصورة طائرة، ثابتة ومتمركزة */
+  background-size: cover; /* جعل الصورة تغطي كامل الشاشة */
+  color: #fff; /* لون النص أبيض */
+  text-align: center; /* محاذاة النص للوسط */
+  margin: 0; /* إزالة الهوامش الخارجية */
+  padding: 20px; /* حشوة داخلية */
+  position: relative; /* لتفعيل الطبقات داخل body */
+}
+
+body::before {
+  content: ""; /* محتوى فارغ لإنشاء طبقة */
+  position: fixed; /* تثبيت الطبقة في الشاشة */
+  top: 0; left: 0; /* بداية من الزاوية العليا اليسرى */
+  width: 100%; height: 100%; /* تغطية كاملة للشاشة */
+  background: rgba(0, 0, 0, 0.4); /* طبقة شفافة سوداء فوق الخلفية */
+  z-index: -1; /* خلف المحتوى الأساسي */
+}
+
+h1 {
+  font-size: 32px; /* حجم العنوان */
+  margin-bottom: 30px; /* مسافة أسفل العنوان */
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.6); /* ظل للنص */
+  letter-spacing: 1px; /* تباعد بين الحروف */
+}
+
+.question {
+  margin: 30px auto; /* توسيط العنصر مع مسافة علوية */
+  padding: 20px; /* حشوة داخلية */
+  border: 2px solid #ffffff55; /* حدود شفافة بيضاء */
+  border-radius: 10px; /* تدوير الزوايا */
+  width: 80%; /* عرض بنسبة 80% من الشاشة */
+  background-color: rgba(255, 255, 255, 0.1); /* خلفية شفافة بيضاء */
+  box-shadow: 0 0 10px rgba(0,0,0,0.3); /* ظل خفيف */
+  animation: fadeIn 0.8s ease-in-out; /* تطبيق حركة دخول */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); } /* بداية غير مرئية ومنخفضة */
+  to { opacity: 1; transform: translateY(0); } /* نهاية مرئية في مكانها */
+}
+
+.question img {
+  width: 150px; /* عرض الصورة */
+  height: auto; /* ارتفاع تلقائي حسب النسبة */
+  margin: 15px 0; /* مسافة علوية وسفلية */
+  border-radius: 8px; /* تدوير زوايا الصورة */
+  box-shadow: 0 0 5px rgba(255,255,255,0.5); /* ظل أبيض خفيف للصورة */
+}
+
+.options {
+  display: flex; /* توزيع أفقي للأزرار */
+  flex-wrap: wrap; /* السماح بالنزول في الشاشات الصغيرة */
+  justify-content: center; /* توسيط الأزرار */
+  gap: 10px; /* مسافة بين الأزرار */
+  margin-top: 10px; /* مسافة علوية */
+}
+
+.options button {
+  padding: 10px 20px; /* حشوة داخلية */
+  font-size: 16px; /* حجم الخط */
+  border: none; /* بدون حدود */
+  border-radius: 6px; /* تدوير الزوايا */
+  background-color: #ffffffcc; /* خلفية شفافة بيضاء */
+  color: #333; /* لون النص رمادي غامق */
+  cursor: pointer; /* شكل المؤشر عند التحويم */
+  transition: transform 0.2s, background-color 0.3s; /* تأثيرات عند التحويم */
+}
+
+.options button:hover {
+  background-color: #fff; /* تغيير الخلفية عند التحويم */
+  transform: scale(1.05); /* تكبير الزر قليلاً */
+}
+
+.result {
+  margin-top: 10px; /* مسافة علوية */
+  font-weight: bold; /* جعل النص عريض */
+  font-size: 18px; /* حجم الخط */
+}
+
+#finalScore, #finalScore2 {
+  margin-top: 20px; /* مسافة علوية */
+  font-size: 20px; /* حجم الخط */
+  font-weight: bold; /* جعل النص عريض */
+  color: #fff; /* لون النص أبيض */
+}
+
+#nextBtn, #restartBtn2 {
+  margin-top: 20px; /* مسافة علوية */
+  padding: 12px 24px; /* حشوة داخلية */
+  font-size: 18px; /* حجم الخط */
+  border: none; /* بدون حدود */
+  border-radius: 8px; /* تدوير الزوايا */
+  background-color: #ff6600; /* لون خلفية برتقالي */
+  color: white; /* لون النص أبيض */
+  cursor: pointer; /* شكل المؤشر */
+  transition: background-color 0.3s; /* تأثير عند التحويم */
+}
+
+#nextBtn:hover, #restartBtn2:hover {
+  background-color: #e65c00; /* تغيير لون الخلفية عند التحويم */
+}
+
+@media (max-width: 600px) {
+  .question {
+    width: 95%; /* عرض أكبر في الشاشات الصغيرة */
+    padding: 15px; /* تقليل الحشوة */
+  }
+
+  .options button {
+    font-size: 14px; /* تقليل حجم الخط */
+    padding: 8px 16px; /* تقليل الحشوة */
+  }
+
+  h1 {
+    font-size: 24px; /* تقليل حجم العنوان */
+  }
+}
+/*--------------------------------------هنا نهايه حقي ال كود حق الالعاب------------------*/
 
