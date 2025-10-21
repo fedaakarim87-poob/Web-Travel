@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>تواصل معنا</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header>
+ شركه يلا نسافر للسفريات✈️
+      </header>
+      <a href="index.html" class="logout">تسجيل خروج</a>
+    <nav>
+      
+        <a href="index.html">الصفحة الرئيسية</a>
+        <a href="login.html">تسجيل دخول</a>
+        <a href="about.html">من نحن</a>
+        <a href="contact.html">تواصل معنا</a>
+        <a href="sugg.html">اقتراحات</a>
+        <a href="games.html">الالعاب</a>
+       
+    </nav>
+ 
+
+  <section class="contact-section">
+    <h2>📧 أرسل لنا رسالة</h2>
+    <form id="contactForm">
+      <label for="name">الاسم الكامل:</label>
+      <input type="text" id="name" placeholder="الاسم الكامل" required>
+
+      <label for="email">البريد الإلكتروني:</label>
+      <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+
+      <label for="message">الرسالة:</label>
+      <textarea id="message" placeholder="اكتب رسالتك هنا..." rows="5" required></textarea>
+
+      <button type="submit">إرسال</button>
+    </form>
+
+    <div id="formMessage" class="form-message"></div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-section contact-info">
+        <h4>تواصل معنا</h4>
+        <p>البريد الإلكتروني: info@almashariq.com</p>
+        <p>الموقع الإلكتروني: www.almashariq.com</p>
+      </div>
+      <div class="footer-section about copyright">
+        <h4>شركة يلا نسافر </h4>
+      <p>نحن منصة متخصصة في تنظيم رحلات ونجعلك تعيش تجربة مليئة بالفرح والمغامرات </p>
+      <p>للتواصل معنا 777-777-777</p>
+      <p class="copyright">جميع الحقوق محفوظة @ 2025</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contactForm");
+  const name = document.getElementById("name");
+  const email = document.getElementById("email");
+  const message = document.getElementById("message");
+  const formMessage = document.getElementById("formMessage");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    if (!name.value || !email.value || !message.value) {
+      formMessage.textContent = "❌ يرجى ملء جميع الحقول المطلوبة.";
+      formMessage.style.color = "red";
+      return;
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email.value)) {
+      formMessage.textContent = "❌ البريد الإلكتروني غير صالح.";
+      formMessage.style.color = "red";
+      return;
+    }
+
+    formMessage.textContent = "✅ تم إرسال رسالتك بنجاح! شكرًا لتواصلك معنا.";
+    formMessage.style.color = "green";
+    form.reset();
+
+    setTimeout(() => {
+      formMessage.textContent = "";
+    }, 5000);
+  });
+});
+
+  </script>
+
+</body>
+</html>
