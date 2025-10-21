@@ -1,0 +1,367 @@
+    /* تصميم صفحة تسجيل الدخول */
+.login-page {
+  
+  font-family: "Tahoma", sans-serif;
+  /* background: linear-gradient(to right, #1E3A8A, #FF7F11); /* أزرق غامق إلى برتقالي */
+  background-image: url("../assets/images/sky.jpg");/* تأكد من اسم الصورة ومكانها */
+  background-size: cover;              /* تجعل الصورة تغطي الشاشة بالكامل */
+         /* تركز الصورة */
+  background-repeat: no-repeat;        /* تمنع التكرار */
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.712); /* خلفية بيضاء للصندوق */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 320px;
+  border: 2px solid #1E3A8A;
+}
+
+.container h2 {
+  margin-bottom: 20px;
+  color: #1E3A8A; /* أزرق غامق */
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  color: #1E3A8A;
+  font-weight: bold;
+}
+
+input::placeholder {
+  color: #888;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #FF7F11; /* برتقالي */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 16px;
+
+}
+
+button:hover {
+  background: #e96f00; /* برتقالي داكن عند التحويم */
+}
+
+#logoutbtn {
+  background: #1E3A8A; /* أزرق غامق */
+}
+
+#logoutbtn:hover {
+  background: #162c6a; /* أزرق أغمق عند التحويم */
+}
+
+#message {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #1E3A8A;
+}
+    /* الصفحه الرئيسيه */
+body
+{
+  margin: 0; 
+  font-family: Arial;
+  background: #FFFFFF ; 
+ 
+   direction: rtl;
+ 
+    text-align: right;
+   
+}
+
+header
+{
+  background-color:  #f2f3f7;
+  color: #000000 ;
+  padding: 25px 20px;
+  text-align: right;
+  font-size: 25px;
+  font-weight: bold;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   border-radius: 10px 10px 0 0;
+}
+.logout
+{
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: #1E3A8A;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+nav
+{
+  background-color:  #1E3A8A;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 2);
+
+}
+
+nav a
+{
+  text-decoration: none;
+  margin: 10px;
+  color: #FFFFFF ;
+  padding: 5px 15px;
+   transition: color 0.3s, background-color 0.3s;
+   border-radius: 5px;
+}
+
+
+nav a:hover {
+    color: #1E3A8A;
+    background-color: #ff913e; 
+}
+
+
+.card img{
+    width: 310px; 
+    height: 205px;
+      object-fit: cover;
+    display: block;
+     transition: transform 0.5s ease;
+    
+  
+}
+.card{
+      border: 3px solid rgb(201, 201, 201,0.8);
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+      text-align: center;
+        overflow: hidden;
+      margin: 20px 50px;
+        border-radius: 10px;
+          transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    border-bottom: 5px solid var(--vibrant-orange);
+
+}
+.card:hover {
+   
+    transform: translateY(-5px) scale(1.02); 
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+.cards
+{   
+ display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+ .card h3 {
+      padding: 0px 5px;
+      font-weight: bold;
+      color: #1E3A8A;
+    }
+
+
+
+.modal {
+    display: none; /* تبدأ مخفية بواسطة CSS */
+    position: fixed; /* تبقى ثابتة أثناء التمرير */
+    z-index: 1000; /* للتأكد من أنها تظهر فوق كل العناصر الأخرى */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color:rgba(255, 255, 255, 0.7); /* خلفية سوداء شبه شفافة */
+    padding-top: 50px;
+}
+.modal-content {
+     background-color: rgba(255, 255, 255, 1); 
+    margin: 5% auto; /* توسيط رأسي وأفقي نسبي */
+    padding: 30px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 500px; /* حجم أقصى مناسب */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: right; /* دعم اللغة العربية */
+}
+.close {
+    color: #aaa;
+    float: left; /* يظهر في أعلى اليسار في تصميم RTL */
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+.close:hover,
+.close:focus {
+    color:  #FF7F11; /* برتقالي عند المرور  var(--dark-blue)*/
+    text-decoration: none;
+}
+.modal-content h2 {
+    color: #1E3A8A ;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.modal-content label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #1E3A8A ;
+}
+.modal-content input[type="text"],
+.modal-content input[type="date"],
+.modal-content input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* لضمان أن العرض لا يزيد بسبب الحشو */
+}
+
+.submit-btn {
+    width: 100%;
+    background-color:#FF7F11;
+    color: #1E3A8A ;
+    padding: 15px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.submit-btn:hover {
+    background-color: #FF7F11;
+}
+.btn-book {
+    display: block; /* لجعل الزر يأخذ كامل عرض البطاقة ويعامل ككتلة */
+     background-color: #FF7F11; /* خلفية برتقالية ساطعة */
+    color:#1E3A8A; /* لون النص أزرق غامق لتباين واضح */
+    text-decoration: none; /* إزالة الخط الافتراضي تحت الروابط */
+    padding: 12px 10px; /* حشو داخلي للزر لجعله أكبر وأوضح */
+    font-weight: bold; /* نص سميك */
+    font-size: 1.1em; /* حجم خط أكبر */
+    text-align: center; /* توسيط النص داخل الزر */
+    border-radius: 0 0 10px 10px; /* جعل الزوايا السفلية للزر مستديرة لتتناسق مع البطاقة */
+    margin-top: auto; /* يدفع الزر للأسفل إذا كانت البطاقة تستخدم flexbox عمودي */
+    transition: background-color 0.3s ease; /* حركة ناعمة عند المرور بالفأرة */
+}
+
+.btn-book:hover {
+    background-color: #FF7F11; /* تفتيح بسيط للون البرتقالي عند مرور الفأرة */
+}
+
+
+.main-footer {
+    background-color: #1E3A8A; /*  #2c3e50لون خلفية داكن */
+    color: #ecf0f1; /* لون النص فاتح */
+    padding: 15px 20px;
+      margin-top: auto;
+}
+
+/* تنسيق الحاوية الداخلية وضمان التوزيع الأفقي */
+.footer-container {
+
+    display: flex; /* تفعيل توزيع العناصر */
+    flex-wrap: wrap; /* السماح للعناصر بالنزول لأسفل في الشاشات الصغيرة */
+    justify-content: center;
+    gap: 10px; /* مسافة بين الأعمدة */
+}
+
+/* تنسيق أقسام الفوتر الفردية */
+.footer-section {
+    width: calc(50% - 20px); 
+   
+}
+
+/* تنسيق العناوين الرئيسية للأقسام */
+.footer-section h4 {
+    color: #FF7F11; 
+    font-size: 18px;
+}
+/* صفحه تواصل معنا */
+/* تنسيقات البوكس */
+/* .contacte-us{
+     background: rgba(255, 255, 255, 0.712); 
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 320px;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+} */
+
+
+
+/* صفحه الاقتراحات */
+.cont { 
+   max-width: 1000px;
+   margin: 30px auto;
+   padding: 20px;
+   background-color: #fff; 
+   border-radius: 15px; 
+   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+   border: 2px solid #FF7F11 ;
+     }
+.cont h2
+{ text-align: center;
+  color: #FF7F11; 
+  margin-bottom: 15px; 
+}
+
+.destination
+ { 
+   display: flex; 
+   flex-wrap: wrap;
+   align-items: center; 
+   gap: 20px; 
+   color: #1E3A8A;
+  }
+.destination img 
+{ 
+  width: 350px;
+   max-width: 100%; 
+   border-radius: 10px; 
+   flex-shrink: 0; 
+  }
+.destination ul 
+{ 
+  flex: 1;
+  list-style-type: disc;
+  padding-left: 20px; 
+  font-size: 18px; 
+}
+
+.cont:nth-child(odd) .destination
+ { flex-direction: row; }
+
+ .cont:nth-child(even) .destination 
+ { flex-direction: row-reverse; }
+
+
