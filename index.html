@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="  موقع يلا نسافر للسفر والرحلات نحن مختصون في تنظيم الرحلات ونجعلك تعيش تجربة ممتعه ومليئة بالمغامرات">
+  <title> تسجيل دخول</title>
+    
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="login-page">
+
+  <div class="container">
+    <h1>تسجيل دخول</h1>
+
+    <form id="loginform">
+      <input type="text" id="username" placeholder="اسم المستخدم" required><br>
+      <input type="password" id="password" placeholder="كلمة المرور" required><br>
+      
+      <button type="submit">دخول</button>
+      <button type="button" id="logoutbtn" style="display: none;">تسجيل خروج</button>
+    </form>
+
+    <p id="message"></p>
+  </div>
+
+  <script>
+    const loginform = document.getElementById("loginform");
+    const logoutbtn = document.getElementById("logoutbtn");
+    const message = document.getElementById("message");
+
+    loginform.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      if (username === "admin" && password === "1234") {
+        message.textContent = "تم تسجيل الدخول بنجاح ";
+        message.style.color = "blue";
+        logoutbtn.style.display = "block";
+        setTimeout(() => {
+    window.location.href = "mainpage.html";
+}, 2000); 
+
+      } else {
+        message.textContent = "اسم المستخدم أو كلمة المرور غير صحيحة ❌";
+        message.style.color = "red";
+      }
+    });
+
+    logoutbtn.addEventListener("click", function() {
+      message.textContent = "تم تسجيل الخروج بنجاح";
+      message.style.color = "orange";
+      logoutbtn.style.display = "none";
+      loginform.reset();
+    });
+    document.getElementById("loginBtn").addEventListener("click", function () {
+  this.classList.add("clicked");
+});
+
+  </script>
+</body>
+</html>
