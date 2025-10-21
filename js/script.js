@@ -186,7 +186,7 @@ function startSecondGame() {
 // 📤 عرض السؤال الحالي في اللعبة الثانية
 function showQuestion2() {
   if (current2 >= questions2.length) { // ✅ إذا انتهت الأسئلة
-    document.getElementById("questionBox2").innerHTML = ""; // 🧹 إفراغ الأسئلة
+    document.getElementById("questionBox2").innerHTML 32= ""; // 🧹 إفراغ الأسئلة
     document.getElementById("finalScore2").innerText = `✅ انتهت اللعبة الثانية! نتيجتك: ${score2} من ${questions2.length}`; // 📊 عرض النتيجة
     document.getElementById("restartBtn2").style.display = "inline-block"; // 🔁 عرض زر إعادة اللعب
     return;
@@ -210,5 +210,6 @@ function checkAnswer2(selected) {
   const correct = questions2[current2].answer; // 🎯 الإجابة الصحيحة
   const resultDiv = document.getElementById(`result2${current2}`); // 📍 مكان عرض النتيجة
   const correctSound = document.getElementById("correctSound"); //
+
 
 
