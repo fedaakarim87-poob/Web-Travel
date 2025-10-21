@@ -11,19 +11,16 @@
     
    <header>
    ✈️ شركه يلا نسافر للسفريات
-  
 </header>
   <a href="index.html" class="logout">تسجيل خروج</a>
      
   <nav>
-     
     <a href="index.html"> صفحه تسجيل دخول</a>
   <a href="mainpage.html">الصفحة الرئيسيه</a>
     <a href="about.html">من نحن</a>
     <a href="contacte.html"> تواصل معنا </a>
      <a href="sugg.html">اقتراحات</a>
     <a href="">    الالعاب </a>
-   
   </nav>
     <main>
  <div class="cards">
@@ -103,10 +100,8 @@
         <form>
             <label for="travelerName">الاسم الكامل:</label>
             <input type="text" id="travelerName" name="travelerName" required>
-
             <label for="travelDate">تاريخ السفر المقترح:</label>
             <input type="date" id="travelDate" name="travelDate" required>
-            
             <label for="travelersCount">عدد المسافرين:</label>
             <input type="number" id="travelersCount" name="travelersCount" min="1" value="1" required>
 
@@ -114,74 +109,9 @@
         </form>
     </div>
  </div>
- <script>
-   // 1. تعريف العناصر
-const modal = document.getElementById('bookingModal');
-const destinationName = document.getElementById('destinationName');
-const bookingForm = modal.querySelector('form');
-
-// إنشاء عنصر لعرض الرسائل داخل الـModal
-let confirmMessage = document.getElementById("confirmBookingMessage");
-if (!confirmMessage) {
-    confirmMessage = document.createElement("p");
-    confirmMessage.id = "confirmBookingMessage";
-    confirmMessage.style.marginTop = "10px";
-    confirmMessage.style.fontWeight = "bold";
-    modal.querySelector(".modal-content").appendChild(confirmMessage);
-}
-
-// 2. دالة فتح النافذة
-function openBookingModal(destination) {
-    // تحديث اسم الوجهة في العنوان
-    destinationName.textContent = destination;
-    // إظهار النافذة المنبثقة
-    modal.style.display = 'block';
-    // مسح أي رسالة قديمة
-    confirmMessage.textContent = "";
-    bookingForm.reset();
-}
-
-// 3. دالة إغلاق النافذة (زر ×)
-function closeBookingModal() {
-    modal.style.display = 'none';
-    confirmMessage.textContent = "";
-    bookingForm.reset();
-}
-
-// 4. الضغط خارج الـModal يظهر رسالة بدلاً من الإغلاق
-window.onclick = function(event) {
-    if (event.target == modal) {
-        confirmMessage.textContent = "تم إرسال طلبك ";
-        confirmMessage.style.color = "blue";
-
-        // مسح الرسالة بعد 3 ثواني
-        setTimeout(() => {
-            confirmMessage.textContent = "";
-        }, 3000);
-
-        // إعادة تعيين النموذج إذا أحببت
-        bookingForm.reset();
-    }
-}
-
-// 5. التعامل مع زر "تأكيد الطلب" داخل الفورم
-bookingForm.addEventListener("submit", function(e) {
-    e.preventDefault(); // منع إرسال النموذج
-
-    confirmMessage.textContent = "تم تأكيد الطلب بنجاح ";
-    confirmMessage.style.color = "blue";
-
-    // إعادة تعيين النموذج بعد 3 ثواني
-    setTimeout(() => {
-        bookingForm.reset();
-        confirmMessage.textContent = "";
-    }, 3000);
-});
-
-    
-</script>
+     <script src="js/script.js"></script>
 </body>
-
 </html>
+
 
 
