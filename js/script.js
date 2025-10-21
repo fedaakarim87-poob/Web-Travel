@@ -1,36 +1,5 @@
-// صفحه تسجيل الدخول 
-    const loginform = document.getElementById("loginform");
-    const logoutbtn = document.getElementById("logoutbtn");
-    const message = document.getElementById("message");
 
-    loginform.addEventListener("submit", function(e) {
-      e.preventDefault();
-
-      const username = document.getElementById("username").value;
-      const password = document.getElementById("password").value;
-
-      if (username === "admin" && password === "1234") {
-        message.textContent = "تم تسجيل الدخول بنجاح ";
-        message.style.color = "blue";
-        logoutbtn.style.display = "block";
-        setTimeout(() => {
-    window.location.href = "mainpage.html";
-}, 2000); 
-
-      } else {
-        message.textContent = "اسم المستخدم أو كلمة المرور غير صحيحة ❌";
-        message.style.color = "red";
-      }
-    });
-
-    logoutbtn.addEventListener("click", function() {
-      message.textContent = "تم تسجيل الخروج بنجاح";
-      message.style.color = "orange";
-      logoutbtn.style.display = "none";
-      loginform.reset();
-    });
-
-
+/*_____________________بدايه كود فداء _________________*/
 // 🔍 تحديد جميع العناصر التي تحتوي على الكلاس 'hidden'
 const hiddenElements = document.querySelectorAll('.hidden');
 
@@ -161,3 +130,4 @@ function checkAnswer2(selected) {
   const correct = questions2[current2].answer; // 🎯 الإجابة الصحيحة
   const resultDiv = document.getElementById(`result2${current2}`); // 📍 مكان عرض النتيجة
   const correctSound = document.getElementById("correctSound"); //
+
