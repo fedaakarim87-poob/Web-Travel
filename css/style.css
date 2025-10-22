@@ -1,20 +1,29 @@
-    /* تصميم صفحة تسجيل الدخول */
+/* تصميم صفحة تسجيل الدخول */
+.page
+{
+  margin: 0; 
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #FFFFFF ; 
+   direction: rtl;
+  text-align: right;
+}
+
 .login-page {
   
   font-family: "Tahoma", sans-serif;
-  background-image: url("../assets/images/sky.jpg");
-  background-size: cover;             
-    
-  background-repeat: no-repeat;        
+  background-image: url("../assets/images/sky.jpg");/* تأكد من اسم الصورة ومكانها */
+  background-size: cover;              /* تجعل الصورة تغطي الشاشة بالكامل */
+  background-repeat: no-repeat;        /* تمنع التكرار */
   display: flex; 
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
+
 }
 
 .container {
-  background: rgba(255, 255, 255, 0.712); 
+  background: rgba(255, 255, 255, 0.712); /* خلفية بيضاء للصندوق */
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
@@ -24,11 +33,8 @@
 }
 
 .container h2 {
-  margin-bottom: 20px;
   color: #1E3A8A; /* أزرق غامق */
 }
-
-
 
 input {
   width: 100%;
@@ -77,17 +83,7 @@ button:hover {
   color: #1E3A8A;
 }
     /* الصفحه الرئيسيه */
-body
-{
-  margin: 0; 
-  font-family: Arial;
-  background: #FFFFFF ; 
- 
-   direction: rtl;
- 
-    text-align: right;
-   
-}
+
 
 header
 {
@@ -130,7 +126,7 @@ nav a
   margin: 10px;
   color: #FFFFFF ;
   padding: 5px 15px;
-   transition: color 0.3s, background-color 0.3s;
+  transition: color 0.3s, background-color 0.3s;
    border-radius: 5px;
 }
 
@@ -140,39 +136,38 @@ nav a:hover {
     background-color: #ff913e; 
 }
 
-
-.card img{
-    width: 310px; 
-    height: 205px;
-      object-fit: cover;
-    display: block;
-     transition: transform 0.5s ease;
-    
-  
-}
-.card{
-      border: 3px solid rgb(201, 201, 201,0.8);
-       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
-      text-align: center;
-        overflow: hidden;
-      margin: 20px 50px;
-        border-radius: 10px;
-          transition: transform 0.3s ease-in-out, box-shadow 0.3s;
-    border-bottom: 5px solid var(--vibrant-orange);
-
-}
-.card:hover {
-   
-    transform: translateY(-5px) scale(1.02); 
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-}
 .cards
 {   
- display: flex;
+   display: flex;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
 }
+
+.card{
+   
+       border: 3px solid rgb(201, 201, 201, 0.8);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        margin: 20px 50px;
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s; /*ما يخليها دبجه */
+
+}
+.card:hover {
+   
+    transform: translateY(-5px) scale(1.02); /* حركه العنصر للاعلى ويكبر العنصر */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card img{
+    width: 310px; 
+    height: 205px;
+     border-radius: 5px;
+    
+  
+}
+
  .card h3 {
       padding: 0px 5px;
       font-weight: bold;
@@ -191,7 +186,7 @@ nav a:hover {
     height: 100%;
     overflow: auto;
     background-color:rgba(255, 255, 255, 0.7); /* خلفية سوداء شبه شفافة */
-    padding-top: 50px;
+    padding-top: 5px;
 }
 .modal-content {
      background-color: rgba(255, 255, 255, 1); 
@@ -279,7 +274,7 @@ nav a:hover {
     background-color: #1E3A8A; /*  #2c3e50لون خلفية داكن */
     color: #ecf0f1; /* لون النص فاتح */
     padding: 15px 20px;
-      margin-top: auto;
+   
 }
 
 /* تنسيق الحاوية الداخلية وضمان التوزيع الأفقي */
@@ -287,13 +282,11 @@ nav a:hover {
 
     display: flex; /* تفعيل توزيع العناصر */
     flex-wrap: wrap; /* السماح للعناصر بالنزول لأسفل في الشاشات الصغيرة */
-    justify-content: center;
-    gap: 10px; /* مسافة بين الأعمدة */
 }
 
 /* تنسيق أقسام الفوتر الفردية */
 .footer-section {
-    width: calc(50% - 20px); 
+    width: 50%; /* عرض العنصر الواحد */
    
 }
 
@@ -302,9 +295,6 @@ nav a:hover {
     color: #FF7F11; 
     font-size: 18px;
 }
-
-
-
 /* صفحه الاقتراحات */
 .cont { 
    max-width: 1000px;
@@ -326,21 +316,18 @@ nav a:hover {
    display: flex; 
    flex-wrap: wrap;
    align-items: center; 
-   gap: 20px; 
    color: #1E3A8A;
   }
 .destination img 
 { 
   width: 350px;
-   max-width: 100%; 
+  height: 200px;
    border-radius: 10px; 
-   flex-shrink: 0; 
+   
   }
 .destination ul 
 { 
-  flex: 1;
-  list-style-type: disc;
-  padding-left: 20px; 
+  flex: 1; 
   font-size: 18px; 
 }
 
@@ -349,66 +336,11 @@ nav a:hover {
 
  .cont:nth-child(even) .destination 
  { flex-direction: row-reverse; }
-
-/*________________________________________بدايه الكود حق فداء _____________________________*/
-body {
-  font-family: 'Segoe UI', sans-serif; /* تحديد نوع الخط */
-  direction: rtl; /* اتجاه النص من اليمين لليسار */
-  background-color: #f9f9f9; /* لون خلفية الصفحة */
-  margin: 0; /* إزالة الهوامش الخارجية */
-  padding: 0; /* إزالة الحشوات الداخلية */
-}
-
-header {
-  background-color: #f2f3f7; /* لون خلفية الهيدر */
-  color: #000000; /* لون النص داخل الهيدر */
-  padding: 25px 20px; /* حشوة داخلية للهيدر */
-  text-align: right; /* محاذاة النص لليمين */
-  font-size: 25px; /* حجم الخط */
-  font-weight: bold; /* جعل الخط عريض */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* ظل خفيف للهيدر */
-  border-radius: 10px 10px 0 0; /* تدوير الزوايا العلوية */
-}
-
-.logout {
-  position: absolute; /* تحديد موقع الزر بشكل مطلق */
-  left: 20px; /* إزاحة من اليسار */
-  top: 20px; /* إزاحة من الأعلى */
-  text-decoration: none; /* إزالة خط تحت النص */
-  color: #ffffff; /* لون النص أبيض */
-  background-color: #1E3A8A; /* لون خلفية الزر */
-  padding: 10px; /* حشوة داخلية */
-  border-radius: 10px; /* تدوير الزوايا */
-  font-weight: bold; /* جعل الخط عريض */
-}
-
-nav {
-  background-color: #1E3A8A; /* لون خلفية شريط التنقل */
-  text-align: center; /* محاذاة الروابط للوسط */
-  font-weight: bold; /* جعل الخط عريض */
-  padding: 20px 0; /* حشوة عمودية */
-  font-size: 20px; /* حجم الخط */
-  box-shadow: 0 2px 5px rgba(0,0,0,2); /* ظل للشريط */
-}
-
-nav a {
-  text-decoration: none; /* إزالة خط تحت الروابط */
-  margin: 10px; /* مسافة بين الروابط */
-  color: #FFFFFF; /* لون النص أبيض */
-  padding: 5px 15px; /* حشوة داخلية للرابط */
-  transition: color 0.3s, background-color 0.3s; /* تأثير انتقال عند التحويم */
-  border-radius: 5px; /* تدوير الزوايا */
-}
-
-nav a:hover {
-  color: #1E3A8A; /* تغيير لون النص عند التحويم */
-  background-color: #ff913e; /* تغيير خلفية الرابط عند التحويم */
-}
-
+ /*________________________________________بدايه الكود حق فداء _____________________________*/
+/* صفحة تواصل معنا */
 .contact-section {
   padding: 30px; /* حشوة داخلية */
-  width: 90%; /* عرض بنسبة 90% من الشاشة */
-  max-width: 320px; /* أقصى عرض */
+  width: 320px; /* أرض */
   margin: 40px auto; /* توسيط العنصر مع مسافة علوية */
   background-color: #fff; /* خلفية بيضاء */
   border-radius: 15px; /* تدوير الزوايا */
@@ -417,73 +349,27 @@ nav a:hover {
 }
 
 .contact-section h2 {
-  color: #ff8000; /* لون العنوان */
+  color: #1E3A8A; /* لون العنوان */
   margin-bottom: 20px; /* مسافة أسفل العنوان */
 }
 
 form {
   display: flex; /* ترتيب العناصر بشكل عمودي */
   flex-direction: column; /* اتجاه عمودي */
-  gap: 15px; /* مسافة بين الحقول */
+
 }
 
 label {
   font-weight: bold; /* جعل النص عريض */
-  margin-bottom: 5px; /* مسافة أسفل العنوان */
+  text-align: right;
+  color: #1E3A8A; /* لون العنوان */
 }
 
-input, textarea {
+textarea {
   padding: 10px; /* حشوة داخلية */
   border: 1px solid #ccc; /* حدود رمادية */
   border-radius: 5px; /* تدوير الزوايا */
   font-size: 15px; /* حجم الخط */
-}
-
-button {
-  background-color: #ff8000; /* لون خلفية الزر */
-  color: white; /* لون النص أبيض */
-  border: none; /* بدون حدود */
-  padding: 10px; /* حشوة داخلية */
-  border-radius: 5px; /* تدوير الزوايا */
-  cursor: pointer; /* تغيير شكل المؤشر عند التحويم */
-  font-size: 16px; /* حجم الخط */
-}
-
-button:hover {
-  background-color: #e66f00; /* تغيير لون الزر عند التحويم */
-}
-
-.main-footer {
-  background-color: #1E3A8A; /* لون خلفية الفوتر */
-  color: #ecf0f1; /* لون النص فاتح */
-  padding: 15px 20px; /* حشوة داخلية */
-  margin-top: auto; /* دفع الفوتر للأسفل */
-  width: 100%; /* عرض كامل */
-  /* position:static;
-     position: relative;
-     bottom: 0; */ /* ملاحظات محذوفة */
-}
-
-/* تنسيق الحاوية الداخلية للفوتر */
-.footer-container {
-  display: flex; /* توزيع أفقي للعناصر */
-  flex-wrap: wrap; /* السماح بالنزول في الشاشات الصغيرة */
-  justify-content: center; /* توسيط المحتوى */
-  gap: 10px; /* مسافة بين العناصر */
-}
-
-/* تنسيق كل قسم داخل الفوتر */
-.footer-section {
-  width: calc(50% - 20px); /* عرض كل قسم بنسبة 50% مع مسافة */
-}
-
-.footer-section h4 {
-  color: #FF7F11; /* لون العنوان */
-  font-size: 14px; /* حجم الخط */
-}
-
-.footer-section p {
-  font-size: 12px; /* حجم النص داخل الفقرة */
 }
 
 /* تنسيق قسم "من نحن" */
@@ -507,16 +393,15 @@ section h2 {
 section p {
   color: #1e3a8a; /* لون النص */
   font-size: 18px; /* حجم الخط */
-  line-height: 1.8; /* ارتفاع السطر */
+
 }
 
 /*______________________نهايه الكود حق فداء_________________________________________________*/
-
 /*games page*/
 
-body {
+.game-page {
   font-family: 'Segoe UI', sans-serif; /* تحديد نوع الخط */
-  background: url('plane.jpg') no-repeat center center fixed; /* خلفية بصورة طائرة، ثابتة ومتمركزة */
+  background: url('../assets/images/plane.jpg') no-repeat center center fixed; /* خلفية بصورة طائرة، ثابتة ومتمركزة */
   background-size: cover; /* جعل الصورة تغطي كامل الشاشة */
   color: #fff; /* لون النص أبيض */
   text-align: center; /* محاذاة النص للوسط */
@@ -525,7 +410,7 @@ body {
   position: relative; /* لتفعيل الطبقات داخل body */
 }
 
-body::before {
+.game-page::before {
   content: ""; /* محتوى فارغ لإنشاء طبقة */
   position: fixed; /* تثبيت الطبقة في الشاشة */
   top: 0; left: 0; /* بداية من الزاوية العليا اليسرى */
@@ -547,7 +432,7 @@ h1 {
   border: 2px solid #ffffff55; /* حدود شفافة بيضاء */
   border-radius: 10px; /* تدوير الزوايا */
   width: 80%; /* عرض بنسبة 80% من الشاشة */
-  background-color: rgba(255, 255, 255, 0.1); /* خلفية شفافة بيضاء */
+  background-color: rgba(255, 255, 255, 0.3); /* خلفية شفافة بيضاء */
   box-shadow: 0 0 10px rgba(0,0,0,0.3); /* ظل خفيف */
   animation: fadeIn 0.8s ease-in-out; /* تطبيق حركة دخول */
 }
@@ -634,6 +519,4 @@ h1 {
   }
 }
 /*--------------------------------------هنا نهايه حقي ال كود حق الالعاب------------------*/
-
-
 
