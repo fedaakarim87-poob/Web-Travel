@@ -24,16 +24,7 @@ function closeBookingModal() {
     bookingForm.reset();
 }
 
-window.onclick = function(event) {
-    if (event.target == modal) {
-        confirmMessage.textContent = "تم إرسال طلبك ";
-        confirmMessage.style.color = "blue";
-        setTimeout(() => {
-            confirmMessage.textContent = "";
-        }, 3000);
-        bookingForm.reset();
-    }
-}
+
 bookingForm.addEventListener("submit", function(e) {
     e.preventDefault(); 
 
