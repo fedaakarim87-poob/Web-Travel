@@ -7,19 +7,23 @@
        <link rel=stylesheet href="css/style.css">
     <title> الصفحة الرئيسية</title>
 </head>
-<body>
+<body class="page">
     
    <header>
    ✈️ شركه يلا نسافر للسفريات
+  
 </header>
-<a href="index.html" class="logout">تسجيل خروج</a>
+  <a href="index.html" class="logout">تسجيل خروج</a>
+     
   <nav>
+     
     <a href="index.html"> صفحه تسجيل دخول</a>
   <a href="mainpage.html">الصفحة الرئيسيه</a>
     <a href="about.html">من نحن</a>
     <a href="contacte.html"> تواصل معنا </a>
      <a href="sugg.html">اقتراحات</a>
- <a href="games.html">الالعاب </a>
+    <a href="game.html">    الالعاب </a>
+   
   </nav>
     <main>
  <div class="cards">
@@ -36,12 +40,12 @@
     </div>
     <div class="card">
         <img src="assets/images/turky2.jpg" alt="تركيا"  width="300" hight="200" >
-        <h3> تركيا - اسطنبول 	تاريخ يلتقي العصر. </h3>
+        <h3> تركيا اسطنبول 	تاريخ يلتقي العصر. </h3>
          <a href="#" class="btn-book" onclick="openBookingModal('تركيا')">احجز الآن</a>
     </div>
      <div class="card">
         <img src="assets/images/holand.jpg" alt="هولندا"  width="300" hight="200" >
-        <h3> هولندا - مدينة الزهور	قنوات، زهور، طواحين.</h3>
+        <h3> هولندا مدينة الزهور.</h3>
          <a href="#" class="btn-book" onclick="openBookingModal('هولندا')">احجز الآن</a>
     </div>
      <div class="card">
@@ -56,7 +60,7 @@
      </div>
          <div class="card">
         <img src="assets/images/yaban.jpg" alt="اليابان"  width="300" hight="200" >
-        <h3>اليابان - بلد متطور يجمع بين الطبيعة والتقاليد</h3>
+        <h3>اليابان بلد يجمع بين الطبيعة والتقاليد</h3>
         <a href="#" class="btn-book" onclick="openBookingModal('اليابان')">احجز الآن</a>
     </div>
         <div class="card">
@@ -83,8 +87,8 @@
 
         <div class="footer-section about-copyright">
             <h4>شركة يلا نسافر</h4>
-            <p>نحن منصة متخصصة في تنظيم رحلات ونجعلك تعيش تجربه مليئة بالفرح والمغامرات .</p>
-        <p>للتواصل معنا  777-777-777</p>
+            <p>نحن منصة متخصصة في تنظيم رحلات ونجعلك تعيش تجربه مليئة بالفرح والمغامرات </p>
+            <p>للتواصل معنا 777-777-777</p>
             <p class="copyright">جميع الحقوق محفوظه © 2025 </p>
         </div>
 
@@ -99,8 +103,10 @@
         <form>
             <label for="travelerName">الاسم الكامل:</label>
             <input type="text" id="travelerName" name="travelerName" required>
+
             <label for="travelDate">تاريخ السفر المقترح:</label>
             <input type="date" id="travelDate" name="travelDate" required>
+            
             <label for="travelersCount">عدد المسافرين:</label>
             <input type="number" id="travelersCount" name="travelersCount" min="1" value="1" required>
 
@@ -108,7 +114,6 @@
         </form>
     </div>
  </div>
-     <script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
-
