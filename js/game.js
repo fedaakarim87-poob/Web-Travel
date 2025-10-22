@@ -5,12 +5,12 @@ const hiddenElements = document.querySelectorAll('.hidden');
 // 📦 دالة لفحص موقع العناصر عند التمرير
 function checkScroll() {
   hiddenElements.forEach(el => {
-    const rect = el.getBoundingClientRect(); // 📐 الحصول على موقع العنصر بالنسبة للنافذة
-    if (rect.top < window.innerHeight - 100) { // ✅ إذا كان العنصر قريبًا من الظهور في الشاشة
-      if (el.classList.contains('vision')) { // 👉 إذا كان العنصر يحتوي على كلاس 'vision'
-        el.classList.add('show-right'); // ➡️ أضف تأثير الظهور من اليمين
+    const rect = el.getBoundingClientRect(); // 📐 موقع العنصر بالنسبة للنافذة
+    if (rect.top < window.innerHeight - 100) { // ✅ إذا كان قريب من الظهور
+      if (el.classList.contains('vision')) {
+        el.classList.add('show-right'); // ➡️ تأثير من اليمين
       } else {
-        el.classList.add('show-bottom'); // ⬇️ أضف تأثير الظهور من الأسفل
+        el.classList.add('show-bottom'); // ⬇️ تأثير من الأسفل
       }
     }
   });
@@ -22,7 +22,7 @@ window.addEventListener('scroll', checkScroll);
 // 🚀 تنفيذ الدالة عند تحميل الصفحة
 window.addEventListener('load', checkScroll);
 
-// 🎌 تعريف أسئلة لعبة الأعلام
+/* 🎌 اللعبة الأولى: لعبة الأعلام */
 const questions = [
   { image: "https://flagcdn.com/w320/vn.png", options: ["كوريا الجنوبية", "الصين", "فيتنام", "تايلاند"], answer: "فيتنام" },
   { image: "https://flagcdn.com/w320/cl.png", options: ["الأرجنتين", "تشيلي", "كولومبيا", "المكسيك"], answer: "تشيلي" },
@@ -31,19 +31,18 @@ const questions = [
   { image: "https://flagcdn.com/w320/tn.png", options: ["المغرب", "تونس", "السودان", "الجزائر"], answer: "تونس" }
 ];
 
-// 🧮 تعريف المتغيرات الخاصة بالنقاط والسؤال الحالي
 let score = 0, current = 0;
 
 // 📤 عرض السؤال الحالي في اللعبة الأولى
 function showQuestion() {
-  if (current >= questions.length) { // ✅ إذا انتهت الأسئلة
-    document.getElementById("quiz").innerHTML = ""; // 🧹 إفراغ محتوى اللعبة
-    document.getElementById("finalScore").innerText = `✅ انتهت اللعبة! نتيجتك: ${score} من ${questions.length}`; // 📊 عرض النتيجة
-    setTimeout(startSecondGame, 3000); // ⏱️ بدء اللعبة الثانية بعد 3 ثوانٍ
+  if (current >= questions.length) {
+    document.getElementById("quiz").innerHTML = "";
+    document.getElementById("finalScore").innerText = `✅ انتهت اللعبة! نتيجتك: ${score} من ${questions.length}`;
+    setTimeout(startSecondGame, 3000); // ⏱️ بعد 3 ثوانٍ تبدأ اللعبة الثانية
     return;
   }
 
-  const q = questions[current]; // 📦 الحصول على السؤال الحالي
+  const q = questions[current];
   const html = `
     <div class="question">
       <p>السؤال ${current + 1}:</p>
@@ -54,35 +53,35 @@ function showQuestion() {
       <div class="result" id="result${current}"></div>
     </div>
   `;
-  document.getElementById("quiz").innerHTML = html; // 🖥️ عرض السؤال في الصفحة
+  document.getElementById("quiz").innerHTML = html;
 }
 
-// ✅ التحقق من الإجابة المختارة في اللعبة الأولى
+// ✅ التحقق من الإجابة في اللعبة الأولى
 function checkAnswer(selected) {
-  const correct = questions[current].answer; // 🎯 الإجابة الصحيحة
-  const resultDiv = document.getElementById(`result${current}`); // 📍 مكان عرض النتيجة
-  const correctSound = document.getElementById("correctSound"); // 🔊 صوت الإجابة الصحيحة
-  const wrongSound = document.getElementById("wrongSound"); // 🔊 صوت الإجابة الخاطئة
+  const correct = questions[current].answer;
+  const resultDiv = document.getElementById(`result${current}`);
+  const correctSound = document.getElementById("correctSound");
+  const wrongSound = document.getElementById("wrongSound");
 
   if (selected === correct) {
-    score++; // ➕ زيادة النقاط
+    score++;
     resultDiv.innerText = "✔️ إجابة صحيحة!";
-    correctSound.play(); // ▶️ تشغيل صوت صحيح
+    correctSound.play();
   } else {
     resultDiv.innerText = `❌ خطأ! الإجابة الصحيحة: ${correct}`;
-    wrongSound.play(); // ▶️ تشغيل صوت خطأ
+    wrongSound.play();
   }
 
   setTimeout(() => {
-    current++; // ⏭️ الانتقال للسؤال التالي
-    showQuestion(); // 🔁 عرض السؤال الجديد
+    current++;
+    showQuestion();
   }, 1500);
 }
 
 // 🚀 بدء اللعبة الأولى عند تحميل الصفحة
 showQuestion();
 
-// 🌍 تعريف أسئلة اللعبة الثانية (الأسئلة الصعبة)
+/* 🌍 اللعبة الثانية: أسئلة صعبة */
 const questions2 = [
   { q: "ما هي الدولة التي لا تملك جيشًا رسميًا؟", options: ["كوستاريكا", "سويسرا", "آيسلندا", "نيوزيلندا"], answer: "آيسلندا" },
   { q: "أي دولة تملك أكبر عدد من الجزر؟", options: ["اليابان", "السويد", "إندونيسيا", "الفلبين"], answer: "السويد" },
@@ -91,27 +90,26 @@ const questions2 = [
   { q: "ما هي الدولة التي تحتوي على أكبر صحراء غير قطبية؟", options: ["أستراليا", "الجزائر", "الصين", "السعودية"], answer: "أستراليا" }
 ];
 
-// 🧮 تعريف المتغيرات الخاصة باللعبة الثانية
 let score2 = 0, current2 = 0;
 
 // 🚀 بدء اللعبة الثانية
 function startSecondGame() {
-  document.getElementById("quiz").style.display = "none"; // ❌ إخفاء اللعبة الأولى
-  document.getElementById("finalScore").style.display = "none"; // ❌ إخفاء نتيجتها
-  document.getElementById("quiz2").style.display = "block"; // ✅ عرض اللعبة الثانية
-  showQuestion2(); // 📤 عرض أول سؤال
+  document.getElementById("quiz").style.display = "none";
+  document.getElementById("finalScore").style.display = "none";
+  document.getElementById("quiz2").style.display = "block";
+  showQuestion2();
 }
 
 // 📤 عرض السؤال الحالي في اللعبة الثانية
 function showQuestion2() {
-  if (current2 >= questions2.length) { // ✅ إذا انتهت الأسئلة
-    document.getElementById("questionBox2").innerHTML = ""; // 🧹 إفراغ الأسئلة
-    document.getElementById("finalScore2").innerText = `✅ انتهت اللعبة الثانية! نتيجتك: ${score2} من ${questions2.length}`; // 📊 عرض النتيجة
-    document.getElementById("restartBtn2").style.display = "inline-block"; // 🔁 عرض زر إعادة اللعب
+  if (current2 >= questions2.length) {
+    document.getElementById("questionBox2").innerHTML = "";
+    document.getElementById("finalScore2").innerText = `✅ انتهت اللعبة الثانية! نتيجتك: ${score2} من ${questions2.length}`;
+    document.getElementById("restartBtn2").style.display = "inline-block";
     return;
   }
 
-  const q = questions2[current2]; // 📦 الحصول على السؤال الحالي
+  const q = questions2[current2];
   const html = `
     <div class="question">
       <p>السؤال ${current2 + 1}: ${q.q}</p>
@@ -121,11 +119,27 @@ function showQuestion2() {
       <div class="result" id="result2${current2}"></div>
     </div>
   `;
-  document.getElementById("questionBox2").innerHTML = html; // 🖥️ عرض السؤال في الصفحة
+  document.getElementById("questionBox2").innerHTML = html;
 }
 
-// ✅ التحقق من الإجابة المختارة في اللعبة الثانية
+// ✅ التحقق من الإجابة في اللعبة الثانية
 function checkAnswer2(selected) {
-  const correct = questions2[current2].answer; // 🎯 الإجابة الصحيحة
-  const resultDiv = document.getElementById(`result2${current2}`); // 📍 مكان عرض النتيجة
-  const correctSound = document.getElementById("correctSound"); }//
+  const correct = questions2[current2].answer;
+  const resultDiv = document.getElementById(`result2${current2}`);
+  const correctSound = document.getElementById("correctSound");
+  const wrongSound = document.getElementById("wrongSound");
+
+  if (selected === correct) {
+    score2++;
+    resultDiv.innerText = "✔️ إجابة صحيحة!";
+    correctSound.play();
+  } else {
+    resultDiv.innerText = `❌ خطأ! الإجابة الصحيحة: ${correct}`;
+    wrongSound.play();
+  }
+
+  setTimeout(() => {
+    current2++;
+    showQuestion2();
+  }, 1500);
+}
