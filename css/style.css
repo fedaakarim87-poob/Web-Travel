@@ -2,7 +2,6 @@
 .login-page {
   
   font-family: "Tahoma", sans-serif;
-  /* background: linear-gradient(to right, #1E3A8A, #FF7F11); /* أزرق غامق إلى برتقالي */
   background-image: url("../assets/images/sky.jpg");/* تأكد من اسم الصورة ومكانها */
   background-size: cover;              /* تجعل الصورة تغطي الشاشة بالكامل */
          /* تركز الصورة */
@@ -635,4 +634,5 @@ h1 {
   }
 }
 /*--------------------------------------هنا نهايه حقي ال كود حق الالعاب------------------*/
+
 
