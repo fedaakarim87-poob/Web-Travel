@@ -2,10 +2,10 @@
 .login-page {
   
   font-family: "Tahoma", sans-serif;
-  background-image: url("../assets/images/sky.jpg");/* تأكد من اسم الصورة ومكانها */
-  background-size: cover;              /* تجعل الصورة تغطي الشاشة بالكامل */
-         /* تركز الصورة */
-  background-repeat: no-repeat;        /* تمنع التكرار */
+  background-image: url("../assets/images/sky.jpg");
+  background-size: cover;             
+    
+  background-repeat: no-repeat;        
   display: flex; 
   justify-content: center;
   align-items: center;
@@ -14,7 +14,7 @@
 }
 
 .container {
-  background: rgba(255, 255, 255, 0.712); /* خلفية بيضاء للصندوق */
+  background: rgba(255, 255, 255, 0.712); 
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
@@ -634,5 +634,6 @@ h1 {
   }
 }
 /*--------------------------------------هنا نهايه حقي ال كود حق الالعاب------------------*/
+
 
 
